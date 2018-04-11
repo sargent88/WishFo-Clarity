@@ -9,6 +9,7 @@ export interface Car {
   color: string;
   trim: string;
   cost: string;
+  miles: number;
   type: string;
   description: string;
   thumbnail: string;

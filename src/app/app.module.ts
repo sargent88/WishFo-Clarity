@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { ClarityModule } from '@clr/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NguCarouselModule } from '@ngu/carousel';
 
 
 import { AppRouter } from './app.router';
@@ -48,7 +49,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRouter
+    AppRouter,
+    NguCarouselModule
   ],
   providers: [CarsService, LoginService, ContactService],
   bootstrap: [AppComponent]
