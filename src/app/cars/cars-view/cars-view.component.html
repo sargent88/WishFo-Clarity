@@ -9,7 +9,7 @@
         <p class="card-text">{{ car.cost }}</p>
       </div>
       <div class="card-footer">
-        <a (click)="openModal($event, car)" class="btn btn-danger">View</a>
+        <a (click)="openModal($event, car)" class="btn btn-warning">View</a>
       </div>
     </a>
   </div>
@@ -19,7 +19,7 @@
     <div class="modal-body">
       <!-- <pre>{{ oneCar | json }}</pre> -->
       <div class="row">
-        <div class="col-md-12 col-lg-6">
+        <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6">
           <ngu-carousel [inputs]="carousel">
             <ngu-item NguCarouselItem>
               <img class="car-images" src="{{ oneCar?.photo_front }}" alt="First slide" draggable="false">
@@ -36,8 +36,8 @@
             <ngu-item NguCarouselItem>
               <img class="car-images" src="{{ oneCar?.photo_inside_back }}" alt="Fifth slide" draggable="false">
             </ngu-item>
-            <button NguCarouselPrev class='btn btn-danger'><clr-icon shape="rewind" class="is-solid"></clr-icon></button>
-            <button NguCarouselNext class='btn btn-danger'><clr-icon shape="fast-forward" class="is-solid"></clr-icon></button>
+            <button NguCarouselPrev class="btn btn-warning-outline previous"><clr-icon shape="rewind" class="is-solid"></clr-icon></button>
+            <button NguCarouselNext class="btn btn-warning-outline next"><clr-icon shape="fast-forward" class="is-solid"></clr-icon></button>
           </ngu-carousel>
           <!-- <ui-carousel [infinite]="true" [fade]="false" [speed]="2000">
             <ui-carousel-item>
@@ -57,7 +57,7 @@
             </ui-carousel-item>
           </ui-carousel> -->
         </div>
-        <div class="col-md-12 col-lg-6">
+        <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6">
           <ul class="list-unstyled">
             <li><strong>Color:</strong> {{ oneCar?.color }}</li>
             <li><strong>Price:</strong> {{ oneCar?.cost }}</li>
@@ -68,6 +68,6 @@
       </div>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-danger" (click)="closeModal()">Ok</button>
+      <button type="button" class="btn btn-warning" (click)="closeModal()">Ok</button>
     </div>
   </clr-modal>

@@ -5,3 +5,13 @@
 .car-images {
     width: 100%;
 }
+
+.previous {
+    float: left;
+    margin: auto;
+}
+
+.next {
+    float: right;
+    margin: auto;
+}

@@ -77,3 +77,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+// import 'hammerjs';
+/* This touch import only seems to work in the component, not app wide. */
