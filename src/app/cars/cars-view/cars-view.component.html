@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" *ngFor="let car of cars">
+    <a (click)="openModal($event, car)" class="card clickable">
+      <div class="card-img">
+        <img src="{{ car.thumbnail }}" alt="Car">
+      </div>
+      <div class="card-block">
+        <h5 class="card-title">{{ car.year }} {{ car.make }} {{ car.model }}</h5>
+        <p class="card-text">{{ car.cost }}</p>
+      </div>
+      <div class="card-footer">
+        <a (click)="openModal($event, car)" class="btn btn-danger">View</a>
+      </div>
+    </a>
+  </div>
+</div>
+<clr-modal [(clrModalOpen)]="showModal" [clrModalSize]="'lg'" [clrModalClosable]="false">
+    <h3 class="modal-title">{{ oneCar?.year }} {{ oneCar?.make }} {{ oneCar?.model }}</h3>
+    <div class="modal-body">
+      <pre>{{ oneCar | json }}</pre>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="closeModal()">Ok</button>
+    </div>
+  </clr-modal>

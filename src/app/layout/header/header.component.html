@@ -1,0 +1,37 @@
+<clr-header>
+  <div class="branding">
+    <a href="..." class="nav-link">
+        <clr-icon shape="car"></clr-icon>
+        <span class="title">WishFo</span>
+    </a>
+  </div>
+  <div class="header-actions">
+      <clr-dropdown>
+          <button class="nav-icon" clrDropdownTrigger>
+              <clr-icon shape="user"></clr-icon>
+              <clr-icon shape="caret down"></clr-icon>
+          </button>
+          <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+              <a href="..." clrDropdownItem>Log in</a>
+              <a href="..." clrDropdownItem>Log out</a>
+          </clr-dropdown-menu>
+      </clr-dropdown>
+  </div>
+</clr-header>
+
+<nav class="subnav" [clr-nav-level]=1>
+  <ul class="nav">
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkeActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/cars" routerLinkeActive="active">Cars</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/promos" routerLinkeActive="active">Promotions</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkeActive="active">Contact</a>
+      </li>
+  </ul>
+</nav>

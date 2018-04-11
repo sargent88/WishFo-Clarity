@@ -1,0 +1,47 @@
+<section class="sidenav-content">
+  <div class="container">
+
+    <form class="compact">
+      <div class="form-group">
+          <label for="make">Make</label>
+          <div class="select">
+              <select id="make">
+                <option value="">-</option>
+                <option *ngFor="let car of cars">{{ car.make }}</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="model">Model</label>
+          <div class="select">
+              <select id="model">
+                <option value="">-</option>
+                <option *ngFor="let car of cars">{{ car.model }}</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="color">Color</label>
+          <div class="select">
+              <select id="color">
+                <option value="">-</option>
+                <option *ngFor="let car of cars">{{ car.color }}</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="type">Type</label>
+          <div class="select">
+              <select id="type">
+                <option value="">-</option>
+                <option *ngFor="let car of cars">{{ car.type }}</option>
+              </select>
+          </div>
+      </div>
+      <!-- <div class="form-group">
+        <label for="aForm_1">This is a form field</label>
+        <input type="text" id="aForm_1" placeholder="Enter value here" size="45">
+      </div> -->
+    </form>
+  </div>
+</section>
