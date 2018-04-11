@@ -3,38 +3,38 @@
 
     <form class="compact">
       <div class="form-group">
-          <label for="make">Make</label>
+          <label for="make"></label>
           <div class="select">
               <select id="make">
-                <option value="">-</option>
-                <option *ngFor="let car of cars">{{ car.make }}</option>
+                <option value="">Make -</option>
+                <option *ngFor="let car of cars" value="{{ car.make }}">{{ car.make }}</option>
               </select>
           </div>
       </div>
       <div class="form-group">
-          <label for="model">Model</label>
+          <label for="model"></label>
           <div class="select">
               <select id="model">
-                <option value="">-</option>
-                <option *ngFor="let car of cars">{{ car.model }}</option>
+                <option value="">Model -</option>
+                <option *ngFor="let car of cars" value="{{ car.model }}">{{ car.model }}</option>
               </select>
           </div>
       </div>
       <div class="form-group">
-          <label for="color">Color</label>
+          <label for="color"></label>
           <div class="select">
               <select id="color">
-                <option value="">-</option>
-                <option *ngFor="let car of cars">{{ car.color }}</option>
+                <option value="">Color -</option>
+                <option *ngFor="let car of cars" value="{{ car.color }}">{{ car.color }}</option>
               </select>
           </div>
       </div>
       <div class="form-group">
-          <label for="type">Type</label>
+          <label for="type"></label>
           <div class="select">
               <select id="type">
-                <option value="">-</option>
-                <option *ngFor="let car of cars">{{ car.type }}</option>
+                <option value="">Type -</option>
+                <option *ngFor="let car of cars" value="{{ car.type }}">{{ car.type }}</option>
               </select>
           </div>
       </div>

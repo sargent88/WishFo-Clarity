@@ -9,7 +9,7 @@
         <p class="card-text">{{ car.cost }}</p>
       </div>
       <div class="card-footer">
-        <a (click)="openModal($event, car)" class="btn btn-warning">View</a>
+        <a (click)="openModal($event, car)" class="btn btn-warning btn-sm btn-block">View</a>
       </div>
     </a>
   </div>
@@ -17,7 +17,6 @@
 <clr-modal [(clrModalOpen)]="showModal" [clrModalSize]="'xl'" [clrModalClosable]="false">
     <h3 class="modal-title">{{ oneCar?.year }} {{ oneCar?.make }} {{ oneCar?.model }} {{ oneCar?.trim }}</h3>
     <div class="modal-body">
-      <!-- <pre>{{ oneCar | json }}</pre> -->
       <div class="row">
         <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6">
           <ngu-carousel [inputs]="carousel">
@@ -39,23 +38,6 @@
             <button NguCarouselPrev class="btn btn-warning-outline previous"><clr-icon shape="rewind" class="is-solid"></clr-icon></button>
             <button NguCarouselNext class="btn btn-warning-outline next"><clr-icon shape="fast-forward" class="is-solid"></clr-icon></button>
           </ngu-carousel>
-          <!-- <ui-carousel [infinite]="true" [fade]="false" [speed]="2000">
-            <ui-carousel-item>
-              <img src="{{ oneCar?.photo_front }}" alt="First slide" draggable="false">
-            </ui-carousel-item>
-            <ui-carousel-item>
-              <img src="{{ oneCar?.photo_back }}" alt="Second slide" draggable="false">
-            </ui-carousel-item>
-            <ui-carousel-item>
-              <img src="{{ oneCar?.photo_side }}" alt="Third slide" draggable="false">
-            </ui-carousel-item>
-            <ui-carousel-item>
-              <img src="{{ oneCar?.photo_inside_front }}" alt="Fourth slide" draggable="false">
-            </ui-carousel-item>
-            <ui-carousel-item>
-              <img src="{{ oneCar?.photo_inside_back }}" alt="Fifth slide" draggable="false">
-            </ui-carousel-item>
-          </ui-carousel> -->
         </div>
         <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6">
           <ul class="list-unstyled">

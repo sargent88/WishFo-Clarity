@@ -2,7 +2,7 @@
     position: fixed;
 } */
 
-@media (min-width: 545px) and (max-width: 769px) {
+/* @media (min-width: 545px) and (max-width: 769px) {
     .select {
         margin-left: -8em !important;
     }
@@ -18,4 +18,17 @@
     .select {
         margin-left: -10em !important;
     }
+} */
+
+.select {
+    float: right !important;
+}
+
+label {
+    padding-inline-start: 0% !important;
+    width: auto !important;
+}
+
+.form-group {
+    padding-inline-start: 0% !important;
 }
