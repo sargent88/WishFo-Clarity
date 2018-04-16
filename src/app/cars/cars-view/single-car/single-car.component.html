@@ -1,3 +1,48 @@
-<p>
-  single-car works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="card">
+        <div class="card-header">
+          {{ car.year }} {{ car.make }} {{ car.model }} {{ car.trim }}
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="card-img">            <!-- <img src="" alt="carousel image"> -->
+              <ngu-carousel [inputs]="carousel">
+                <ngu-item NguCarouselItem>
+                  <img class="car-images" src="{{ car.photo_front }}" alt="First slide" draggable="false">
+                </ngu-item>
+                <ngu-item NguCarouselItem>
+                  <img class="car-images" src="{{ car.photo_back }}" alt="Second slide" draggable="false">
+                </ngu-item>
+                <ngu-item NguCarouselItem>
+                  <img class="car-images" src="{{ car.photo_side }}" alt="Third slide" draggable="false">
+                </ngu-item>
+                <ngu-item NguCarouselItem>
+                  <img class="car-images" src="{{ car.photo_inside_front }}" alt="Fourth slide" draggable="false">
+                </ngu-item>
+                <ngu-item NguCarouselItem>
+                  <img class="car-images" src="{{ car.photo_inside_back }}" alt="Fifth slide" draggable="false">
+                </ngu-item>
+                <button NguCarouselPrev class="btn btn-warning-outline previous"><clr-icon shape="rewind" class="is-solid"></clr-icon></button>
+                <button NguCarouselNext class="btn btn-warning-outline next"><clr-icon shape="fast-forward" class="is-solid"></clr-icon></button>
+              </ngu-carousel>
+            </div>
+          </div>
+          <br>
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Color:</strong> {{ car.color }}</li>
+              <li class="list-group-item"><strong>Price:</strong> {{ car.cost }}</li>
+              <li class="list-group-item"><strong>Miles:</strong> {{ car.miles }}</li>
+              <li class="list-group-item"><strong>About:</strong> {{ car.description }}</li>
+            </ul>
+            <div class="card-footer">
+              <a [routerLink]="['/cars']" class="btn btn-warning">View All Cars</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

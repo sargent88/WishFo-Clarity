@@ -1,0 +1,17 @@
+.car-images {
+    width: 100%;
+}
+
+.previous {
+    float: left;
+    margin: auto;
+}
+
+.next {
+    float: right;
+    margin: auto;
+}
+
+.container {
+    padding-bottom: 5em;
+}

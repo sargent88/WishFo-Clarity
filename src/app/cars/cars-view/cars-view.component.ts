@@ -20,9 +20,9 @@ export class CarsViewComponent implements OnInit {
 
   ngOnInit() {
     this.service.getAll()
-    .finally(() => {
-      console.log(this.cars.length)
-    })
+    // .finally(() => {
+    //   console.log(this.cars[5].id)
+    // })
     .subscribe((resp) => {this.cars = resp})
 
     this.carousel = {
@@ -40,8 +40,10 @@ export class CarsViewComponent implements OnInit {
   }
 
   openModal($event, car) {
+    // console.log($event)
     $event.preventDefault();
     this.oneCar = car;
+    // console.log(this.oneCar.id)
     this.showModal = true;
   }
   closeModal() {

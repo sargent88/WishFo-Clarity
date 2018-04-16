@@ -30,4 +30,8 @@ export class CarsService {
     return this.http.get(this.dataSet)
   }
 
+  getOne(id) {
+    return this.http.get(this.dataSet)
+  }
+
 }
